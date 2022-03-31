@@ -11,7 +11,7 @@
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin="" />
-   <link rel="stylesheet" href="./style/style.css">
+   <link rel="stylesheet" href="../style/style.css">
    <!-- bootstrap -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -22,30 +22,32 @@
    <!-- en-tête -->
    <header role="heading" class="container-fluid navbar navbar-expand-md">
 
-      <div class="row">
+      <div class="row justify-content-lg-around ms-lg-5">
+         <!-- logo sunpower -->
          <div class="col-3">
-            <a href="#" class="navbar-brand m-0">
-               <img src="./Assets/Logo.png" alt="Logo Sunpower" class="img-fluid">
+            <a href="#" class="navbar-brand">
+               <img src="../Assets/Logo.png" alt="Logo Sunpower" class="img-fluid mt-md-3 ms-md-3" id="logo">
             </a>
          </div>
-         <div class="navbar-brand col-6 m-0 align-self-center">
-            <img src="./Assets/Sunpower.png" alt="Titre Sunpower" class="img-fluid">
-            <p class="navbar-text text-center">L'énergie à portée de main</p>
+         <!-- titre sunpower -->
+         <div class="navbar-brand col-6">
+            <img src="../Assets/Sunpower.png" alt="Titre Sunpower" class="img-fluid offset-md-3" id="sunpower">
+            <h1 class="navbar-text text-center text-uppercase h6">L'énergie à portée de main</h1>
          </div>
-
+         <!-- bouton burger responsive -->
          <button type="button" class="navbar-toggler navbar-light bg-light" data-bs-toggle="collapse"
             data-bs-target="#navbar-content">
             <span class="navbar-toggler-icon"></span>
          </button>
          <!-- barre de navigation -->
          <nav class="collapse navbar-collapse" id="navbar-content">
-            <ul class="navbar-nav ms-auto text-lg-center">
-               <li class="nav-item"><a href="#" class="nav-link">Accueil</a></li>
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
                <li class="nav-item"><a href="#" class="nav-link">Nos produits</a></li>
-               <li class="nav-item"><a href="#" class="nav-link">Implantation</a></li>
+               <li class="nav-item"><a href="./carte.html" class="nav-link">Implantation</a></li>
                <li class="nav-item"><a href="#" class="nav-link">A propos</a></li>
                <li class="nav-item"><a href="#" class="nav-link">Partenaires</a></li>
-               <li class="nav-item"><a href="#" class="nav-link">Contactez-nous</a></li>
+               <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
             </ul>
          </nav>
       </div>
@@ -58,9 +60,12 @@
       <section class="row mt-5">
          <H2 role="text">Nos produits</H2>
          <hr />
-         <div>
-            <img role="img" src="./Assets/Ombirère.png" alt="Ombrière" class="img-fluid rounded">
-            <p role="text" class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ipsum
+         <div class="row">
+            <img role="img" src="../Assets/Ombirère.png" alt="Ombrière" class="img-fluid rounded col-lg-6"
+               id="ombrière">
+            <p role="text" class="pt-3 col-lg-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Quibusdam,
+               ipsum
                aliquid
                perferendis
                deserunt
@@ -75,7 +80,8 @@
          <H2 role="text">Notre implantation</H2>
          <hr>
          <div>
-            <img role="img" src="./Assets/carte.png" alt="Carte interactive" class="img-fluid rounded">
+            <a href="carte.html"><img role="img" src="../Assets/carte.png" alt="Carte interactive"
+                  class="img-fluid rounded"></a>
             <p role="text" class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit maiores harum
                pariatur labore
                sed
@@ -93,13 +99,13 @@
          <hr>
          <div class="row justify-content-around">
             <div class="col-3 align-self-center">
-               <img role="img" src="./Assets/Einstein.png" alt="Pareneinstein" class="img-fluid rounded">
+               <img role="img" src="../Assets/Einstein.png" alt="Pareneinstein" class="img-fluid rounded">
             </div>
             <div class="col-3 align-self-lg-center ps-lg-5">
-               <img role="img" src="./Assets/Oppenheimer.png" alt="Oppenheimer" class="img-fluid rounded">
+               <img role="img" src="../Assets/Oppenheimer.png" alt="Oppenheimer" class="img-fluid rounded">
             </div>
             <div class="col-3">
-               <img role="img" src="./Assets/Turing.png" alt="Turing" class="img-fluid rounded">
+               <img role="img" src="../Assets/Turing.png" alt="Turing" class="img-fluid rounded">
             </div>
             <p role="text" class="pt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique repellendus
                harum nostrum
@@ -117,19 +123,21 @@
          <hr>
 
          <h3 class="h4">Pour prendre contact</h3>
-         <form action="notresiteweb@sunpower.fr" method="post">
+         <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
             <div class="container flex-column">
 
                <!-- champs nom/prénom -->
                <h5 class="mt-3">Vous êtes :</h5>
                <div class="container d-md-flex">
                   <div class="my-2 col-md-5">
-                     <label>NOM : </label>
-                     <input type="text" name="nom" required />
+                     <label aria-label="nom" for="surname">NOM :
+                        <input type="text" name="surname" id="surname" required />
+                     </label>
                   </div>
                   <div class="my-2 col-md-5">
-                     <label>Prénom : </label>
-                     <input type="text" name="prenom" required />
+                     <label aria-label="Prénom" for="name">Prénom :
+                        <input type="text" name="name" id="name" required />
+                     </label>
                   </div>
                </div>
 
@@ -139,19 +147,19 @@
                   <label class="row justify-content-center">
                      <div class="col-6">
                         <input type="radio" name="statut" id="collectivite" value="collectivite" checked>
-                        <label>Une collectivité</label>
+                        <label for="collectivite">Une collectivité</label>
                      </div>
                      <div class="col-6">
                         <input type="radio" name="statut" id="entreprise" value="entreprise">
-                        <label>Une entreprise</label>
+                        <label for="entreprise">Une entreprise</label>
                      </div>
                      <div class="col-6">
                         <input type="radio" name="statut" id="syndic" value="syndic">
-                        <label>Un syndic</label>
+                        <label for="syndic">Un syndic</label>
                      </div>
                      <div class="col-6">
                         <input type="radio" name="statut" id="particulier" value="particulier">
-                        <label>Un particulier</label>
+                        <label for="particulier">Un particulier</label>
                      </div>
                   </label>
                </div>
@@ -163,24 +171,28 @@
 
                <div class="container d-md-flex mb-5">
                   <div class="my-2 col-md-6">
-                     <label>Tél. : </label>
-                     <input type="tel" name="numStandard" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
-                        placeholder="00-00-00-00-00" required />
+                     <label for="phone">Tél. :
+                        <input type="tel" name="numStandard" id="phone"
+                           pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="00-00-00-00-00"
+                           required />
+                     </label>
                   </div>
                   <div class="my-2 col-md-6">
-                     <label>e-mail : </label>
-                     <input type="email" id="email" pattern=".+@globex\.com" placeholder="@dresse mail" required />
+                     <label for="mail">e-mail :
+                        <input type="email" id="mail" pattern=".+@globex\.com" placeholder="@dresse mail" required />
+                     </label>
                   </div>
                </div>
 
                <!-- placement des boutons -->
                <div class="flex-column d-md-flex flex-md-row-reverse">
                   <div class="my-2 col-md-5">
-                     <button type="submit" class="btn btn-success">Envoyer</button>
+                     <button type="submit" class="btn btn-success" id="send">Envoyer</button>
                   </div>
                   <div class="my-2 col-md-5">
-                     <a href="./contact.html"><button class="btn btn-success">Je choisis le
-                           formulaire complet</button></a>
+                     <a href="./contact.html" class="badge bg-success text-decoration-none p-3"
+                        id="contact-redirection">Je choisis le
+                        formulaire complet</a>
                   </div>
                </div>
             </div>
@@ -188,27 +200,53 @@
       </section>
 
 
-      <!-- section de nos sponsors -->
+      <!-- section de nos partenaires -->
       <section class="mt-5">
          <H2 role="text">Nos partenaires</H2>
          <hr>
-         <p role="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, voluptatem blanditiis!
-            Necessitatibus deleniti
-            veniam rerum dicta! Voluptates exercitationem perferendis quam praesentium dolores accusamus vero, esse
-            magnam
-            velit! Voluptas, dicta illo.</p>
+         <div class="row pt-md-3">
+            <div class="col-md-3 ms-0 col-4 d-md-flex justify-content-md-end">
+               <img src="../Assets/Ademe.png" alt="logo Ademe" class="img-fluid" id="ademe">
+            </div>
+            <h3 class="h5 col-8 align-self-center d-md-none">Agence de la transition écologique</h3>
+            <div class="flex-md-column col-md-8">
+               <h3 class="h5 d-none d-md-flex col-md-8">Agence de la transition écologique</h3>
+               <p role="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+                  voluptatem
+                  blanditiis!
+                  Necessitatibus deleniti
+                  veniam rerum dicta! Voluptates exercitationem perferendis quam praesentium dolores accusamus vero,
+                  esse
+                  magnam
+                  velit! Voluptas, dicta illo.</p>
+            </div>
+         </div>
       </section>
    </main>
 
 
    <!-- Pied de page -->
    <footer class="container-fluid border-top border-success mt-5">
-      <div class="row text-center">
+      <div class="row text-center my-md-3">
          <p class="col-4">Copyright 2022
             &copy;
          </p>
          <p class="col-4">Sunpower</p>
          <p class="col-4">Projet 1</p>
+      </div>
+      <div class="row ms-5 ms-md-0">
+         <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+            <img src="../Assets/montpellier.png" alt="Montpellier" class="img-fluid" id="montpellier">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+            <img src="../Assets/Herault.png" alt="Département Hérault" class="img-fluid" id="herault">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+            <img src="../Assets/occitanie.png" alt="Région Occitanie" class="img-fluid" id="occitanie">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+            <img src="../Assets/toulouse.png" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+         </div>
       </div>
       <hr>
       <p>Farah - Stéphane - Charles</p>
@@ -217,9 +255,6 @@
 </body>
 
 </html>
-<!-- script JS -->
-<script src="./script.js"></script>
-<!-- script pour la map-->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
