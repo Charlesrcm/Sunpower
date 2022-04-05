@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Page de contact pour les clients souhaitant un premier contact pour un devis ou l'achat d'une ou plusieurs ombrières">
+  <!--style de la map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <link rel="stylesheet" href="../style/style.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Contact | Sunpower</title>
+</head>
+
+<body>
+
+  <!-- en-tête -->
+  <header class="container-fluid">
+
+    <div class="navbar navbar-expand-md d-md-flex flex-row col-12">
+
+      <div class="d-flex flex-row">
+
+        <div>
+          <a href="index.html"><img src="../Assets/Logo.jpg" alt="Logo" class="img-fluid"></a>
+        </div>
+
+        <div class="d-flex flex-column">
+          <img src="../Assets/Sunpower.jpg" alt="Titre-sunpower" class="img-fluid">
+          <h1 aria-label="titre-contact" class="navbar-text text-center text-uppercase h6">L'énergie à portée de main
+          </h1>
+          <nav role="navigation" class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+              <li class="nav-item"><a href="produit.html" class="nav-link">Nos produits</a></li>
+              <li class="nav-item"><a href="carte.html" class="nav-link">Implantation</a></li>
+              <li class="nav-item"><a href="AboutUs.html" class="nav-link">A propos</a></li>
+              <li class="nav-item"><a href="partenaires.html" class="nav-link">Partenaires</a></li>
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="d-flex">
+          <button type="button" class="navbar-toggler navbar-light bg-light align-self-center" data-bs-toggle="collapse"
+            data-bs-target="#navbar-content">
+            <span class="navbar-toggler-icon"></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="m-3 pt-5">
+    <h2 class="text-center">Nos membres fondateurs</h2>
+    <hr>
+
+    <!-- Présentation de Pareneinstein -->
+    <div class="row pt-5">
+      <img role="img" src="../Assets/Einstein.jpg" alt="Photo d'Alex Pareneinstein" class="img-fluid col-12 col-md-3" />
+      <div class="col-12 col-md-9">
+        <h3 id="fond1" class="pt-3">Alex Pareneinstein</h3>
+        <p role="text" aria-label="Présentation d'Alex Pareneinstein">Né à Ulm, en Allemagne, le 14 mars 1979, sa
+          famille s’installe en France (Normandie) en 1991.
+          Très tôt, il manifeste un intérêt et beaucoup de compétence pour la science, la physique en particulier.
+          Malgré un parcours inégal, il prouve sa capacité d’adaptation et sa passion grandi.<br />
+          En 1997, il valide un baccalauréat scientifique et part étudier à Cambridge (Angleterre) où il fréquentera un
+          temps l’institut Isaac Newton. C’est à cette période qu’il s’intéresse aux grands principes de la physique
+          quantique.<br />
+          De retour en France, en 2002, il rationalise son travail et étudie l’optimisation des réseaux d’énergie à
+          destination des particuliers et des collectivités. Durant ses études anglaises, il a pris conscience de
+          l’impact de la société sur l’environnement. Il travail alors sur le projet de <a
+            href="https://www.actu-environnement.com/ae/news/1142.php4">parc solaire de Chambéry</a>. Il œuvrera ensuite
+          à des projet d’envergure, en lien avec plusieurs groupes parmis lesquels on retrouve <a
+            href="https://www.fnh.org">la fondation pour la nature et l’homme</a>.<br />
+          Bien que le sujet le passionne, il préfère se rapprocher de l’individu considérant que les projets de grandes
+          tailles sont aussi trop éloignés des bénéficiaires visés. C’est en 2010 qu’il rencontre Hugo Oppenheimer avec
+          qui il collabore encore aujourd’hui.</p>
+      </div>
+    </div>
+
+    <!-- Présentation de Oppenheimer -->
+    <div class="row pt-3">
+      <div class="col-12 col-md-9">
+        <h3 id="fond2" class="pt-3">Hugo Oppenheimer</h3>
+        <p role="text" aria-label="Présentation d'Hugo Oppenheimer">Né en le 22 avril 1984 à New York, Etats Unis. Le
+          jeune Hugo Oppenheimer grandi tout près de Central Park
+          (Manhattan), où il se découvre un intérêt sans borne pour les arbres et la faune qui y vit. Ses parents, qui
+          voient cela comme un hobby d’enfant le pousse à suivre des études. <br />
+          An 2000, il vient d’avoir 16 ans. Il obtient son diplôme de fin de lycée (High School) et valide la même année
+          son intégration à l’université. Il a trouvé un équilibre entre les attentes familiales et sa passion qui est
+          demeurée et entame donc des études de droits international, bien décidé à défendre la protection de
+          l’environnement. Il ne sera jamais major de promo car il préfère passer du temps en extérieur et avec des
+          collectifs à la perspective de rester enfermé pour étudier. Malgré cet apparente nonchalance, ses professeurs
+          s’accordent à le présenter comme le plus investis des étudiants, doué d’un grand potentiel et voué à un grand
+          avenir. <br />
+          En 2008, il s’expatrie en France afin de rejoindre sa fiancée, Viviane, qu’il épouse 18 mois plus tard. Dés
+          son arrivé, il s’investit dans des campagnes d’informations sur l’état de l’environnement et de réintroduction
+          des espèces. <br />
+          Avril 2010, il se rend à un colloque jumelant deux secteurs bien éloignés, l’environnement et la technologie
+          de pointe. Alors qu’il s’y rend avec la volonté de défendre ses arguments contre « les promoteurs de
+          l’industrie galopante », il rencontre une équipe de chercheur qui travail sur le principe de recherche
+          durable. Il en ignore alors l’importance mais un jeune chercheur du nom de Alex Pareneinstein fait parti de
+          cette équipe.</p>
+      </div>
+      <img role="img" src="../Assets/Oppenheimer.jpg" alt="Photo d'Hugo Oppenheimer" class="img-fluid col-12 col-md-3">
+    </div>
+
+    <!-- présentation de Turing -->
+    <div class="row pt-3">
+      <img role="img" src="../Assets/Turing.jpg" alt="Photo de Serge Turing" class="img-fluid col-12 col-md-3" />
+      <div class="col-12 col-md-9">
+        <h3 id="fond3" class="pt-3">Serge Turing</h3>
+        <p role="text" aria-label="Présentation de Serge Turing">Né le 23 juin 1972 à Larnas en Ardèche. Suis une
+          scolarité assez classique. Il ne présente pas de
+          difficulté
+          mais ne semble que peu s’intéresser aux sujets abordés. C’est à son entrée au collège, en 1983, qu’il
+          découvre
+          le théâtre et se révèle. Son niveau scolaire remonte au fur et à mesure qu’il s’investit dans la discipline.
+          A
+          partir de 1986, il intègre une troupe de théâtre amateur, <a
+            href=https://latroupesauvage07.wixsite.com/la-troupe-sauvage/presse-198619987>la troupe sauvage</a>. Il y
+          restera 4 ans, jusqu’au bac. <br />
+          Il poursuit en études de commerce, de 1990 à 1995 et devient rapidement très connu sur le marché, d’abord en
+          Ardèche, puis dés 1997, dans tout le sud de la France. Il intervient sur différent marchés, mobilier,
+          automobile, informatique, … En 2001, il ouvre sa société. Il commercialise les produits de nombreuses
+          marques
+          avec, comme fil conducteur, la qualité et la fiabilité du produit. <br />
+          2009, Serge Turing place sa société en gérance, il recherche de nouveau défis. Durant 15 mois, il voyage
+          autour du monde, présente des conférences et intervient dans les écoles de commerce.
+          De retour en France, en Novembre 2010, il se met en quête du projet qui lui offrira un nouveau souffle
+          professionnel. Il cherche de l’innovation, de la qualité et une place pour l’humain dans ce nouveau projet.
+          <br />
+          C’est en Juin 2011 qu’il rencontre deux passionnés qui veulent rendre accessible et responsable l’énergie
+          solaire. Serge Turing qui connait bien le produit, mais aussi ses problématiques rentre dans l’équipe. Deux
+          ans plus tard, Sunpower voit le jour avec les valeurs d'écologie et de confiance qu’elle défend encore
+          aujourd’hui.
+        </p>
+      </div>
+    </div>
+
+    <!-- Présentation de Sunpower -->
+    <h2 class="mt-5">Notre histoire</h2>
+    <hr>
+    <p role="text" aria-label="Histoire de Sunpower">Sunpower est avant tout le fruit d'une rencontre entre pasionnés.
+      <a href="#fond1">Alex
+        Pareneinstein</a> et <a href="#fond2">Hugo Oppenheimer</a> se sont rencontrés au printemps 2010 à Paris, à
+      l'ocasion d'un colloque
+      réunissant des représentants des nouvelles technologies et des défenseurs de l'environnement. Ce colloque répond
+      alors à une ambition, voir converger ces deux visions, jusqu'alors distantes, pour un avenir meilleur. La presse
+      ne parlera que peu de cette rencontre mais elle fût décisive pour le tournant qui se joue aujourd'hui.<br />
+      Quelques mois plus tard, en 2011, c'est au tour de <a href="#fond3">Serge Turing</a> de rejoindre l'aventure. Il
+      n'est pas scientifique mais présente un grand talent pour défendre le projet et communiquer son enthousiasme. Il
+      tiendra, d'ailleur, un rôle important dans la naissance de la société deux ans plus tard. Le berceau de la jeune
+      société sera Grenoble, une ville accueillante où son siège sociale est encore aujourd'hui.<br />
+      Dés le départ, Sunpower se donne une mission : Améliorer la vie de chacun, aussi bien en terme de confort, que
+      de
+      sécurité et de protection. Pour la jeune équipe, il est impossible de revenir en arrière, avant les problèmes de
+      polution, mais s'entêter dans un modèle dont la planète ne se relèvera pas n'est pas non plus envisageable.
+      L'équipe se fixe donc sur trois axes essentiels.
+    </p>
+    <ul role="list">
+      <li>Pousser la recherche dans le sens d'une énergie propre, peu couteuse et aussi durable que possible.</li>
+      <li>Dévelloper un engagement et une collaboration avec les groupes écologistes et sympatisants afin de faire
+        valoir le potentiel de cette démarche et fédérer de nouveaux acteurs.</li>
+      <li>Faire connaitre les bénéfices attendus aux financeurs, représentants d'entreprises et grandes collectivité
+        afin de financer des recherches qui s'annoncent longues.</li>
+    </ul>
+    <p role="text">Ce trio, volontaire et engagé, montre l'exemple, tant et si bien que, ce qui apparaissait être un
+      petit projet
+      de
+      passionnés fait vite parler de lui. Les soutiens se multiplient, les accords de coopérations aussi et les
+      équipes
+      de recherches s'organisent.<br />
+      Dés 2015, Sunpower collabore avec l'INES afin de dévelloper des panneaux solaires plus performants pendant
+      qu'une
+      autre de nos équipes dévellope une nouvelle génération de baterie, en collaboration avec le CEA.<br />
+      En 2016, l'entreprise, en pleine expension, découvre le projet "Zen-E-DRIVE" financé par l'ADEME et devine un
+      immence potentiel. Les recherches se concentre sur le projet qui réunira leurs compétences et, en 2020, le
+      premier
+      prototype d'ombrière solaire voit le jour. Durant ces 4 années, Sunpower a profité du soutient de groupe
+      financier, mais aussi des collectivités et de la collaboration avec des équipes de chercheur du monde entien. Le
+      fil rouge, partager la connaissance pour rationnaliser la production.<br />
+      Aujourd'hui, Sunpower est fier de l'installation de ses 4 premières ombrières (soit 20 emplacements au total),
+      sur
+      le secteur de Montpelier. "Cette réalisation, c'est la puissance de l'industrie mise au service de chacun" (Alex
+      Pareneinstein). Deux autres seront bientôt proposées dans l'agglomération toulousaine et, de toute évidence, ils
+      ne comptent pas s'arréter là.</p>
+    <p role="text" class="citation fw-bold">"Nous cesserons de rechercher des axes améliorations le jour où nous vivrons
+      dans un
+      monde
+      parfait! D'ici là, il reste fort à faire et nous ne seront jamais trop nombreux, ou trop investis, pour faire
+      avancer les choses." Hugo Oppenheimer à la question "Jusqu'où irez vous ?" (Nov. 2019).</p>
+
+    <!-- bouton de retour en haut -->
+    <section>
+      <a role="link" aria-label="Retour en haut de page" class="text-decoration-none fs-6" href="#" id="haut"
+        title="Retour haut de page">Retour en haut</a>
+    </section>
+
+    <!-- formulaire de contact -->
+    <h3 class="h4">Pour prendre contact</h3>
+    <hr>
+    <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
+      <div class="container flex-column">
+
+        <!-- champs nom/prénom -->
+        <h5 class="mt-3">Vous êtes :</h5>
+        <div class="container d-md-flex">
+          <div class="my-2 col-md-5">
+            <label aria-label="nom" for="surname">NOM :
+              <input aria-label="Renseignez votre nom" type="text" name="surname" id="surname" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-5">
+            <label aria-label="Prénom" for="name">Prénom :
+              <input aria-label="Renseignez votre prénom" type="text" name="name" id="name" required />
+            </label>
+          </div>
+        </div>
+
+        <!-- Champs statut -->
+        <h5 class="mt-3">Votre statut :</h5>
+        <div class="mt-3">
+          <label class="row justify-content-center">
+
+            <div class="form-check col-5">
+              <label role="text" for="collectivite">Une collectivité</label>
+              <input role="radio" type="checkbox" name="statut" id="collectivite" value="collectivite"
+                class="form-check-input">
+            </div>
+
+            <div class="form-check col-6">
+              <label role="text" for="check-firm">Une entreprise
+                <input role="radio" role="button"
+                  aria-label="cocher se bouton si vous n'êtes pas une entreprise ou un syndic" class="form-check-input"
+                  type="checkbox" id="check-firm">
+              </label>
+            </div>
+
+            <div class="form-check col-5">
+              <input role="radio" type="checkbox" name="statut" id="syndic" value="syndic" class="form-check-input">
+              <label role="text" for="syndic">Un syndic</label>
+            </div>
+
+            <div class="form-check col-6">
+              <input role="radio" type="checkbox" name="statut" id="particulier" value="particulier"
+                class="form-check-input">
+              <label role="text" for="particulier">Un particulier</label>
+            </div>
+          </label>
+        </div>
+
+        <!-- Champ de coordonnées -->
+        <h5 class="pt-1 mt-3">Pour vous joindre :</h5>
+
+        <div class="d-md-flex mb-5">
+          <div class="my-2 col-md-5">
+            <label aria-label="Téléphone" role="text" for="phone">Tél. :
+              <input aria-label="Renseignez votre numéro de téléphone" type="tel" name="numStandard" id="phone"
+                placeholder="00-00-00-00-00" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-6">
+            <label role="text" aria-label="Mail" for="mail">e-mail :
+              <input aria-label="Renseignez votre adresse mail" type="email" id="mail" placeholder="@dresse mail"
+                required />
+            </label>
+          </div>
+        </div>
+
+        <!-- placement des boutons -->
+        <div class="flex-column d-md-flex flex-md-row-reverse">
+          <div class="my-2 col-md-5">
+            <button role="button" aria-label="Envoyer le formulaire de contact" type="submit" class="btn"
+              id="send">Envoyer</button>
+          </div>
+          <div class="my-2 col-md-5">
+            <a role="link" href="./contact.html" class="badge text-decoration-none p-3" id="contact-redirection">Je
+              choisis
+              le formulaire complet</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+
+  <!-- Pied de page -->
+  <footer role="contentinfo" class="container-fluid border-top border-success mt-5">
+    <div class="row ms-5 ms-md-0 pt-md-3">
+      <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+        <img role="img" src="../Assets/montpellier.jpg" alt="Montpellier" class="img-fluid" id="montpellier">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+        <img src="../Assets/Herault.jpg" alt="Département Hérault" class="img-fluid" id="herault">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/occitanie.jpg" alt="Région Occitanie" class="img-fluid" id="occitanie">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/toulouse.jpg" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+      </div>
+    </div>
+    <div class="row text-center my-md-3">
+      <p class="col-3">Copyright 2022
+        &copy;</p>
+      <p class="col-3">Sunpower</p>
+      <p class="col-3">Projet 1</p>
+      <a class="text-decoration-none col-3 text-light" href="#" class="col-3">Mention légal</a>
+    </div>
+    <hr>
+    <p>Farah - Stéphane - Charles</p>
+  </footer>
+
+</body>
+
+<script src="../JS/Scroll.js"></script>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

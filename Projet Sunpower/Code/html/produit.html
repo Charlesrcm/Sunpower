@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Page de contact pour les clients souhaitant un premier contact pour un devis ou l'achat d'une ou plusieurs ombrières">
+  <!--style de la map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <link rel="stylesheet" href="../style/style.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Contact | Sunpower</title>
+</head>
+
+<body>
+  <!-- en-tête -->
+  <header class="container-fluid">
+
+    <div class="navbar navbar-expand-md d-md-flex flex-row col-12">
+
+      <div class="d-flex flex-row">
+
+        <div>
+          <a href="index.html"><img src="../Assets/Logo.jpg" alt="Logo" class="img-fluid"></a>
+        </div>
+
+        <div class="d-flex flex-column">
+          <img src="../Assets/Sunpower.jpg" alt="Titre-sunpower" class="img-fluid">
+          <h1 aria-label="titre-contact" class="navbar-text text-center text-uppercase h6">L'énergie à portée de main
+          </h1>
+          <nav role="navigation" class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+              <li class="nav-item"><a href="produit.html" class="nav-link">Nos produits</a></li>
+              <li class="nav-item"><a href="carte.html" class="nav-link">Implantation</a></li>
+              <li class="nav-item"><a href="AboutUs.html" class="nav-link">A propos</a></li>
+              <li class="nav-item"><a href="partenaires.html" class="nav-link">Partenaires</a></li>
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="d-flex">
+          <button type="button" class="navbar-toggler navbar-light bg-light align-self-center" data-bs-toggle="collapse"
+            data-bs-target="#navbar-content">
+            <span class="navbar-toggler-icon"></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="m-3">
+    <h2 class="my-5 text-uppercase text-center">Nos produits</h2>
+    <h3>L'ombrière solaire</h3>
+    <hr>
+    <div class="row">
+      <img role="img" src="../Assets/Ombirère.jpg" alt="Photo de l'ombrière" class="img-fluid col-md-4">
+      <p role="text" class="col-md-7">A la pointe de la technologie, notre ombrière offre bien plus qu'un point de
+        charge pour les véhicules électrique. De plus, il s'agit d'un produit <span class="fw-bold text-uppercase">100%
+          français</span>, responsable et engagé dans
+        la préservation de votre avenir. Nous vous accompagnons dans la projet de A à Z. De la recherche
+        d'investissement à la construction du projet nous seront à vos côtés.</p>
+    </div>
+
+    <div class="d-md-flex mt-5">
+      <div class="col-md-4">
+        <h3 class="h4">I - Productivité</h3>
+        <p role="text">Ajourd'hui, un panneau solaire converti en moyenne 15% de l'ensoleillement reçu (source <a
+            href="https://selectra.info">Selectra</a> - organisme français indépendant). Notre produit vous offre 25% de
+          convertion soit 135% de la production d'un panneau de toiture par exemple. Grace à ce rendement, vous assurez
+          la charge de votre/vos véhicule(s) sans contraintes. Fini les problèmes de pénuries, les files d'attentes et
+          vous vous détacherez des cours du pétrole ainsi que du nucléaire. Le solaire est gratuit à l'emploi et
+          innépuisable.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h4">II - Technologie</h3>
+        <p role="text">La technologie solaire, après avoir beaucoup progréssé ces dernières decennies, poursuit sa
+          route,
+          visant une
+          plus grande productivité mais également des coûts raisonnés en terme de production et un impact responsable.
+          Chez
+          Sunpower, Nous participons activement au dévellopement de ces technologies afin de vous offrir le meilleur de
+          l'innovation.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h4">III - Estétique</h3>
+        <p role="text">Nos ombrières sont étudiées pour optimiser leur efficacité et déssinées pour être vue. Fini la
+          borne
+          que l'on
+          cache dans un coin car elle fait honte. Ses courbes douces et ses couleurs sont étudiées pour s'intégrer dans
+          un
+          design global. Mieux encore, Si vous avez des attentes particulières, elles peuvent être habillées pour
+          répondre
+          à
+          vos besoins spécifiques.</p>
+      </div>
+    </div>
+
+    <div class="d-md-flex mt-3">
+      <div class="col-md-4">
+        <h3 class="h4">IV - Respect</h3>
+        <p role="text">Exploité l'<strong>énergie solaire</strong> dépace l'éffet de mode et les tendances de marché. Il
+          s'agit d'un
+          engagement de longue date afin de diminuer l'exploitation des énergies fossiles et le taux de polution qui en
+          découle. Dans cette même optique, nous nous engageons sur deux axes, l'intégration environnementale avec des
+          matériaux à faibles impacts et un investissement dans le retraitement des déchets. Toute notre production est
+          française (qualité garantie et soutien à l'emploi sur nos territoires) et installé par des entreprises locales
+          de
+          confiance. A court termes, nous ouvriront une filière de recyclage, elle aussi <strong>100%
+            française</strong>,
+          afin de renforcer notre engagement qualité sur l'ensemble de la filière.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h4">V - Ammortissement</h3>
+        <p role="text">La majorité des panneaux solaires s'ammortissent sur une durée équivalente à leur durée de vie.
+          En
+          somme, Vos
+          économies financières sont négligeable. Sunpower vous propose un ammortissement deux fois plus rapide grace à
+          son
+          rendement de pointe. De plus, les factures d'électricité et de carburant ne font qu'augmenter ces dernières
+          années. Avec l'ombrière, c'est au tour de vos éconnomies de prendre de la hauteur.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h4">VI - Investissement</h3>
+        <p role="text">Notre investissement massif en france répond à une volonté de limiter les coûts et les impacts du
+          transport. Dans
+          le cadre de la recherche, nous travaillons quotidiennement en lien avec les équipes de l'<a
+            href="https://www.ines-solaire.org/">INES</a> et le <a href="www.cea.fr">CEA</a>, ainsi qu'avec des équipes
+          de
+          recherche à l'nternationnal. Notre but premier n'est pas de faire mieux que le voisin mais de vous offrir un
+          produit de qualité et d'ammorcer une évolution majeur dans les habitudes de production et de consomation
+          d'énergie.</p> class="col-md-2"
+      </div>
+    </div>
+
+    <h2 class="mt-4 text-uppercase">Nos services</h2>
+    <hr>
+    <p role="text">Au delà de la qualité produit, et afin d'encourager la transition responsable, nous offrons à nos
+      futurs clients
+      l'information, le conseil et l'accompagnement afin que de transformer vos projet en réalisations satisfaisantes.
+    </p>
+
+    <h3 class="h4">L'information</h3>
+    <p role="text">Nos équipes sont à votre disposition pour vous renseigner sur les problématiques énergétiques, les
+      solutions
+      proposables et les bonnes pratiques en termes de gestions de la consomation et de la production. Ces informations
+      vous sont offertes dans un esprit de <strong>collaboration</strong> et ne vous engage à aucun moment.<br />
+      Vous aurez également, à disposition, des contacts dans les structures qui oeuvrent à la production
+      <strong>écorespesponsable</strong> d'énergie et l'opportunité d'être informé des nouveaux dévellopement de
+      technologies, produits et services.
+    </p>
+
+    <h3 class="h4">Le conseil</h3>
+    <p role="text">Acheter un vase ou un porte clé sont des décisions de faibles portées. L'installation d'une ombrière,
+      comme tout
+      produit d'investissement, demande de la maîtrise afin que votre engagement soit valorisé au mieu. Chez Sunpower,
+      nous dépéchons un conseillier sur place qui assurera l'étude de faisabilité, vous proposera plusieurs options et
+      personalisera votre solution finale. <br />
+      Chez nous, vous connaissez votre produit avant de décider de l'acheter.</p>
+
+    <h3 class="h4">L'accompagnement</h3>
+    <p role="text">Dossier de financement, autorisation des municipalités, impact environnemental. Toutes ces notions
+      techniques
+      peuvent rendre rétissant, surtout quand on gère déja un emploi du temps bien rempli. Nous accompagnons donc chaque
+      client selon ses disponibilités et les besoins de son projet. Nous seront à vos cotés pour le montage du dossier
+      et les demandes de subventions, mais également quand vous présenterez le produit et soutiendrez votre projet.
+      <br />
+      Travailler avec Sunpower, c'est travailler en équipe.
+    </p>
+
+    <!-- formulaire de contact -->
+    <h3 class="h4">Pour prendre contact</h3>
+    <hr>
+    <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
+      <div class="container flex-column">
+
+        <!-- champs nom/prénom -->
+        <h5 class="mt-3">Vous êtes :</h5>
+        <div class="container d-md-flex">
+          <div class="my-2 col-md-5">
+            <label aria-label="nom" for="surname">NOM :
+              <input aria-label="Renseignez votre nom" type="text" name="surname" id="surname" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-5">
+            <label aria-label="Prénom" for="name">Prénom :
+              <input aria-label="Renseignez votre prénom" type="text" name="name" id="name" required />
+            </label>
+          </div>
+        </div>
+
+        <!-- Champs statut -->
+        <h5 class="mt-3">Votre statut :</h5>
+        <div class="mt-3">
+          <label class="row justify-content-center">
+
+            <div class="form-check col-5">
+              <label role="text" for="collectivite">Une collectivité</label>
+              <input role="radio" type="checkbox" name="statut" id="collectivite" value="collectivite"
+                class="form-check-input">
+            </div>
+
+            <div class="form-check col-6">
+              <label role="text" for="check-firm">Une entreprise
+                <input role="radio" role="button"
+                  aria-label="cocher se bouton si vous n'êtes pas une entreprise ou un syndic" class="form-check-input"
+                  type="checkbox" id="check-firm">
+              </label>
+            </div>
+
+            <div class="form-check col-5">
+              <input role="radio" type="checkbox" name="statut" id="syndic" value="syndic" class="form-check-input">
+              <label role="text" for="syndic">Un syndic</label>
+            </div>
+
+            <div class="form-check col-6">
+              <input role="radio" type="checkbox" name="statut" id="particulier" value="particulier"
+                class="form-check-input">
+              <label role="text" for="particulier">Un particulier</label>
+            </div>
+          </label>
+        </div>
+
+        <!-- Champ de coordonnées -->
+        <h5 class="pt-1 mt-3">Pour vous joindre :</h5>
+
+        <div class="d-md-flex mb-5">
+          <div class="my-2 col-md-5">
+            <label aria-label="Téléphone" role="text" for="phone">Tél. :
+              <input aria-label="Renseignez votre numéro de téléphone" type="tel" name="numStandard" id="phone"
+                placeholder="00-00-00-00-00" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-6">
+            <label role="text" aria-label="Mail" for="mail">e-mail :
+              <input aria-label="Renseignez votre adresse mail" type="email" id="mail" placeholder="@dresse mail"
+                required />
+            </label>
+          </div>
+        </div>
+
+        <!-- placement des boutons -->
+        <div class="flex-column d-md-flex flex-md-row-reverse">
+          <div class="my-2 col-md-5">
+            <button role="button" aria-label="Envoyer le formulaire de contact" type="submit" class="btn"
+              id="send">Envoyer</button>
+          </div>
+          <div class="my-2 col-md-5">
+            <a role="link" href="./contact.html" class="badge text-decoration-none p-3" id="contact-redirection">Je
+              choisis
+              le formulaire complet</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <!-- Pied de page -->
+  <footer role="contentinfo" class="container-fluid border-top border-success mt-5">
+    <div class="row ms-5 ms-md-0 pt-md-3">
+      <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+        <img role="img" src="../Assets/montpellier.jpg" alt="Montpellier" class="img-fluid" id="montpellier">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+        <img src="../Assets/Herault.jpg" alt="Département Hérault" class="img-fluid" id="herault">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/occitanie.jpg" alt="Région Occitanie" class="img-fluid" id="occitanie">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/toulouse.jpg" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+      </div>
+    </div>
+    <div class="row text-center my-md-3">
+      <p class="col-3">Copyright 2022
+        &copy;</p>
+      <p class="col-3">Sunpower</p>
+      <p class="col-3">Projet 1</p>
+      <a class="text-decoration-none col-3 text-light" href="#" class="col-3">Mention légal</a>
+    </div>
+    <hr>
+    <p>Farah - Stéphane - Charles</p>
+  </footer>
+</body>
+
+</html>
+<script src="../JS/form.js"></script>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
