@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Page de contact pour les clients souhaitant un premier contact pour un devis ou l'achat d'une ou plusieurs ombrières">
+  <!--style de la map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <link rel="stylesheet" href="../style/style.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Contact | Sunpower</title>
+</head>
+
+<body>
+  <!-- en-tête -->
+  <header class="container-fluid">
+
+    <div class="navbar navbar-expand-md d-md-flex flex-row col-12">
+
+      <div class="d-flex flex-row">
+
+        <div>
+          <a href="index.html"><img src="../Assets/Logo.jpg" alt="Logo" class="img-fluid"></a>
+        </div>
+
+        <div class="d-flex flex-column">
+          <img src="../Assets/Sunpower.jpg" alt="Titre-sunpower" class="img-fluid">
+          <h1 aria-label="titre-contact" class="navbar-text text-center text-uppercase h6">L'énergie à portée de main
+          </h1>
+          <nav role="navigation" class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+              <li class="nav-item"><a href="produit.html" class="nav-link">Nos produits</a></li>
+              <li class="nav-item"><a href="carte.html" class="nav-link">Implantation</a></li>
+              <li class="nav-item"><a href="AboutUs.html" class="nav-link">A propos</a></li>
+              <li class="nav-item"><a href="partenaires.html" class="nav-link">Partenaires</a></li>
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="d-flex">
+          <button type="button" class="navbar-toggler navbar-light bg-light align-self-center" data-bs-toggle="collapse"
+            data-bs-target="#navbar-content">
+            <span class="navbar-toggler-icon"></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Présentation de nos partenaires -->
+    <h2 class="pt-4">Nos partenaires</h2>
+    <hr>
+    <h3 class="pb-4">En collaboration avec :</h3>
+
+    <!-- Ademe -->
+    <div class="row justify-content-between justify-content-md-start flex-md-row">
+      <div class="col-2">
+        <a class="d-md-flex justify-content-md-end" role=" link" href="https://www.ademe.fr/"><img class="img-fluid"
+            role="img" src="../Assets/Ademe.jpg" alt="logo de l'Ademe" style="max-width: 5rem;"></a>
+      </div>
+      <div class="col-9 col-md-6">
+        <p role="text" aria-label="présentation du partenaire Ademe">L'Agence de l'Environnement et de la Maîtrise de
+          l'Energie, fondée en 1991, est un établissement public à
+          caractère industriel et commercial qui participe à la mise en œuvre des politiques publiques dans les
+          domaines de l'environnement, de l'énergie et du développement durable. C'est elle qui a financé le projet
+          <a role="img"
+            href="https://docplayer.fr/114361676-Projet-zen-e-drive-synthese-non-confidentielle.html">Zen-E-DRIVE</a>.
+          Elle accompagne Sunpower depuis sa création afin de valoriser la production d'électricité propre accéssible
+          à tous.
+        </p>
+      </div>
+    </div>
+
+    <!-- Ines -->
+    <div class="row flex-md-row-reverse mt-4 mt-md-0 me-md-3">
+      <div class="col-12 col-md-2 align-self-md-center">
+        <a role="link" href="https://www.ines-solaire.org/"><img role="img" src="../Assets/ines.jpg"
+            alt="Lien vers le site Ines" class="img-fluid"></a>
+      </div>
+      <div class="col-12 col-md-6">
+        <p role="text" class="pt-3 text-md-end pe-md-1">L'Institut National de l'énergie solaire compte parmis les
+          leader mondiaux de la R&D, de l'expertise et de la formation pour les technologies solaires avancées, leur
+          intégration dans les systèmes et la gestion
+          intelligente de l’énergie. Leur objectif : redessiner l’avenir pour la transition énergétique. Nos équipes
+          collaborent depuis 2015 afin de produire des panneaux solaires plus efficients.</p>
+      </div>
+    </div>
+
+    <!-- CEA -->
+    <div class="row mt-5 mt-md-0">
+      <div class="col-12 col-md-2 align-self-md-center">
+        <a class="d-md-flex justify-content-md-end" href="https://www.ines-solaire.org/"><img role="img"
+            src="../Assets/cea.jpg" alt="Lien vers le site du CEA" class="img-fluid w-50"></a>
+      </div>
+      <div class="col-12 col-md-6 py-3">
+        <p role="text">Le commissariat à l’énergie atomique et aux énergies alternatives (CEA) est un acteur majeur de
+          la
+          recherche,
+          au service de l'État, de l'économie et des citoyens. Il apporte des solutions concrètes à leurs besoins dans
+          différents domaines.Dans le cadre de recherches sur les énergies renouvelables, Nos équipes collaborent pour
+          mettre au point un accumulateur à haute densité d’énergie. Cette technologie optimisera le fonctionnement
+          des
+          bateries (puissance et durée) et réduira donc les déchets.</p>
+      </div>
+    </div>
+
+    <!-- PSA -->
+    <div class="row flex-md-row-reverse mt-4 mt-md-0">
+      <div class="col-12 col-md-2 align-self-md-center">
+        <a class="d-md-flex justify-content-md-start" role="link" href="https://www.ines-solaire.org/"><img role="img"
+            src="../Assets/psa.jpg" alt="Lien vers le site de PSA" class="img-fluid w-50"></a>
+      </div>
+      <div class="col-12 col-md-6 pt-3">
+        <p role="text" class="pt-3 text-md-end pe-md-3">Le groupe PSA (Peugeaot Société Anonyme) est fondé en 1966 avec
+          pour objectif, la mobilité pour
+          tous.
+          Depuis
+          le millieu des années 80, le groupe PSA dévellope des voitures électriques, limitant ainsi les émissions de
+          CO². Nos objectifs comuns ont ouvert la voie vers une collaboration, aujourd'hui très fructueuse et dont
+          vous
+          bénéficiez.</p>
+      </div>
+    </div>
+
+
+    <h3 class="pt-4 pb-2">Ils nous soutiennent :</h3>
+
+    <!-- BPI -->
+    <div class="row">
+      <div class="col-12 col-md-2">
+        <a class="d-md-flex justify-content-md-end" role="link" href="https://www.ines-solaire.org/"><img role="img"
+            src="../Assets/bpi.jpg" alt="Lien vers le site de BPI France" class="img-fluid w-50"></a>
+      </div>
+      <div class="col-12 col-md-10 pt-3">
+        <p role="text" class="col-md-6">BPI France (Banque Publique d'Investissement) accompagne les entreprises pour
+          voir
+          plus grand et
+          plus loin.
+          Suite à la présentation de nos projets, BPI France a investi 2 millions d'euros afin de soutenir ce
+          changement.</p>
+      </div>
+    </div>
+
+    <!-- Soutien financier -->
+    <div class="row">
+      <div class="col-12 col-md-2">
+        <img role="img" src="../Assets/monnaie.jpg" alt="un arbuste pousse a partir de monnaie" class="img-fluid"></a>
+      </div>
+      <div class="col-12 col-md-10">
+        <p role="text" class="col-md-6">Sunpower bénéficie également de la confiance et du soutien d'un fond
+          d'investissement privé qui a
+          déjà
+          investi 30 millions d'euros dans nos projet de recherches. Préférant laisser les projecteurs sur les valeurs
+          comunes que nous défendons, les gestionnaires de ce fonds demandent à garder l'anonymat. Nous respectons ce
+          choix mais leur exprimons ici toute notre reconnaissance.</p>
+      </div>
+    </div>
+
+    <!-- sponsor -->
+    <h3 class="pt-4 pb-2 ms-md-2">Ils nous font confiance :</h3>
+
+    <!-- Montpellier -->
+    <div class="row flex-md-row-reverse ms-md-2">
+      <div class="col-12 col-md-8">
+        <a role="link" href="https://www.montpellier3m.fr/"><img role="img" src="../Assets/montpellier.jpg"
+            alt="Lien vers le site de l'Agglomeration de Montpelier" class="img-fluid"></a>
+      </div>
+      <div class="col-12 col-md-4">
+        <p role="text"><a href="">Manu REYNAUD</a>, second conseillé de monsieur Michaël DELAFOSSE, maire de
+          montpelier,
+          et
+          président du groupe <a href="https://choisir-lecologie.fr/">Choisir l'écologie à Montpellier</a> s'est très
+          tôt intéréssé à nos recherches et nous a activement soutenu dans celles ci. Grace à lui, nous avons
+          rapidement
+          été mis en contact avec le conseil Général de l'Hérault ainsi que les représentants dévellopement durable de
+          la région Occitanie. Au travers de monsieur Reynaud, c'est toute une agglomération qui se mobilise!</p>
+      </div>
+    </div>
+
+    <!-- Hérault -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <a class="d-md-flex justify-content-md-end" role="link" href="https://herault.fr/"><img role="img"
+            src="../Assets/Herault.jpg" alt="Lien vers le site de l'Herault" class="img-fluid"></a>
+      </div>
+      <div class="col-12 col-md-6">
+        <p role="text">Au sein des équipes du conseil général, <a
+            href="https://herault.fr/elu/27/325-christophe-morgo.htm">Christophe Morgo</a>, vice-président délégué à
+          l'environnement est notre contact privilégié. Travaillant au sein d'une équipe très concernée par la
+          préservation de l'environnement, encourager l'utilisation de l'energie électrique (hors-nucléaire) lui
+          semblait être une évidence. Par son engagement et sa visibilité, monsieur Morgo est aujourd'hui un allié
+          formidable dans notre démarche de transition énergétique. Le département soutien d'ailleur financièrement
+          L'installation des ombrières solaire à Montpelier.</p>
+      </div>
+    </div>
+
+    <!-- Occitanie -->
+    <div class="row flex-md-row-reverse ms-md-2">
+      <div class="col-12 col-md-8">
+        <a role="link" href="https://www.laregion.fr/"><img role="img" src="../Assets/occitanie.jpg"
+            alt="Lien vers le site d'Occitanie" class="img-fluid w-50 ps-md-4" style="max-width: 7rem;"></a>
+      </div>
+      <div class="col-12 col-md-4">
+        <p role="text">Madame <a href="https://www.laregion.fr/BOURGUET-Zina">Zina Bourget</a> contactée par
+          Christophe
+          Morgo à
+          rejoint les défenseurs du projet d'ombrières pour Montpelier. En soutenant cette vision auprès de ses
+          collègues élus régionnaux, elle à obtenu une participation financière de leur part, permettant d'élargie
+          l'implantation sur la commune de montpelier.
+          Par le biais de madame <a href="https://www.laregion.fr/FRANCOIS-Laurence">Laurence FRANCOIS</a>, madame
+          Bourguet nous a introduit auprès des élus de Toulouse qui s'est déja positionné pour installer nos ombrières
+          sur son teritoire. Par cette démarche, l'occitanie démontre sont attachement à sa région comme à ses
+          administrés.</p>
+      </div>
+    </div>
+
+    <!-- Toulouse -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <a class="d-md-flex justify-content-md-end" role="link"
+          href="https://fr.wikipedia.org/wiki/Toulouse_M%C3%A9tropole"><img role="img" src="../Assets/toulouse.jpg"
+            alt="Lien vers la page wikipedia de l'Agglomération de toulouse" class="img-fluid"></a>
+      </div>
+      <div class="col-12 col-md-6">
+        <p role="text">La ville de Toulouse est déja très investie dans la démarche de transition energétique et
+          d'assainissement
+          des réseaux routier. En lien avec monsieur <a
+            href="https://www.toulouse.fr/web/la-mairie/conseil-municipal/elus/-/representative/2748289-boyer-maxime">Maxime
+            Boyer</a>, adjoint au maire délégué aux nouvelles mobilités, et monsieur <a
+            href="https://www.toulouse.fr/web/la-mairie/conseil-municipal/elus/-/representative/2748274-de-scorraille-jean-baptiste">Jean-Baptiste
+            de Scorraille</a>, adjoint délégué à l'énergie et à la régie municipale d’electricité de Toulouse,
+          Sunpower
+          se prépare à installer deux nouvelles ombrières solaire sur l'agglomération de Toulouse Métropole. Cette
+          action marque une continuité dans la volonté de produire une Occitanie plus propre et annonce de belles
+          avancées pour les années à venir.</p>
+      </div>
+    </div>
+
+    <!-- formulaire de contact -->
+    <h3 class="h4">Pour prendre contact</h3>
+    <hr>
+    <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
+      <div class="container flex-column">
+
+        <!-- champs nom/prénom -->
+        <h5 class="mt-3">Vous êtes :</h5>
+        <div class="container d-md-flex">
+          <div class="my-2 col-md-5">
+            <label aria-label="nom" for="surname">NOM :
+              <input aria-label="Renseignez votre nom" type="text" name="surname" id="surname" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-5">
+            <label aria-label="Prénom" for="name">Prénom :
+              <input aria-label="Renseignez votre prénom" type="text" name="name" id="name" required />
+            </label>
+          </div>
+        </div>
+
+        <!-- Champs statut -->
+        <h5 class="mt-3">Votre statut :</h5>
+        <div class="mt-3">
+          <label class="row justify-content-center">
+
+            <div class="form-check col-5">
+              <label role="text" for="collectivite">Une collectivité</label>
+              <input role="radio" type="checkbox" name="statut" id="collectivite" value="collectivite"
+                class="form-check-input">
+            </div>
+
+            <div class="form-check col-6">
+              <label role="text" for="check-firm">Une entreprise
+                <input role="radio" role="button"
+                  aria-label="cocher se bouton si vous n'êtes pas une entreprise ou un syndic" class="form-check-input"
+                  type="checkbox" id="check-firm">
+              </label>
+            </div>
+
+            <div class="form-check col-5">
+              <input role="radio" type="checkbox" name="statut" id="syndic" value="syndic" class="form-check-input">
+              <label role="text" for="syndic">Un syndic</label>
+            </div>
+
+            <div class="form-check col-6">
+              <input role="radio" type="checkbox" name="statut" id="particulier" value="particulier"
+                class="form-check-input">
+              <label role="text" for="particulier">Un particulier</label>
+            </div>
+          </label>
+        </div>
+
+        <!-- Champ de coordonnées -->
+        <h5 class="pt-1 mt-3">Pour vous joindre :</h5>
+
+        <div class="d-md-flex mb-5">
+          <div class="my-2 col-md-5">
+            <label aria-label="Téléphone" role="text" for="phone">Tél. :
+              <input aria-label="Renseignez votre numéro de téléphone" type="tel" name="numStandard" id="phone"
+                placeholder="00-00-00-00-00" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-6">
+            <label role="text" aria-label="Mail" for="mail">e-mail :
+              <input aria-label="Renseignez votre adresse mail" type="email" id="mail" placeholder="@dresse mail"
+                required />
+            </label>
+          </div>
+        </div>
+
+        <!-- placement des boutons -->
+        <div class="flex-column d-md-flex flex-md-row-reverse">
+          <div class="my-2 col-md-5">
+            <button role="button" aria-label="Envoyer le formulaire de contact" type="submit" class="btn"
+              id="send">Envoyer</button>
+          </div>
+          <div class="my-2 col-md-5">
+            <a role="link" href="./contact.html" class="badge text-decoration-none p-3" id="contact-redirection">Je
+              choisis
+              le formulaire complet</a>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- bouton de retour en haut -->
+    <section>
+      <a role="link" aria-label="Retour en haut de page" class="text-decoration-none fs-6" href="#" id="haut"
+        title="Retour haut de page">Retour en haut</a>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer role="contentinfo" class="container-fluid border-top border-success mt-5">
+    <div class="row ms-5 ms-md-0 pt-md-3">
+      <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+        <img role="img" src="../Assets/montpellier.jpg" alt="Montpellier" class="img-fluid" id="montpellier">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+        <img src="../Assets/Herault.jpg" alt="Département Hérault" class="img-fluid" id="herault">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/occitanie.jpg" alt="Région Occitanie" class="img-fluid" id="occitanie">
+      </div>
+      <div role="img" class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/toulouse.jpg" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+      </div>
+    </div>
+    <div class="row text-center my-md-3">
+      <p class="col-3">Copyright 2022
+        &copy;</p>
+      <p class="col-3">Sunpower</p>
+      <p class="col-3">Projet 1</p>
+      <a class="text-decoration-none col-3 text-light" href="#" class="col-3">Mention légal</a>
+    </div>
+    <hr>
+    <p>Farah - Stéphane - Charles</p>
+  </footer>
+
+</body>
+
+</html>
+<script src="../JS/Scroll.js"></script>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

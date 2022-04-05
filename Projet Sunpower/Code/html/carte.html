@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Carte interactive des différents emplacments des ombrières dans Montpellier et bientôt Toulouse">
+  <!-- CCS leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style/style.css" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Implantation | Sunpower</title>
+</head>
+
+<body onload="init()">
+  <!-- en-tête -->
+  <header class="container-fluid">
+
+    <div class="navbar navbar-expand-md d-md-flex flex-row col-12">
+
+      <div class="d-flex flex-row">
+
+        <div>
+          <a href="index.html"><img src="../Assets/Logo.jpg" alt="Logo" class="img-fluid"></a>
+        </div>
+
+        <div class="d-flex flex-column">
+          <img src="../Assets/Sunpower.jpg" alt="Titre-sunpower" class="img-fluid">
+          <h1 aria-label="titre-contact" class="navbar-text text-center text-uppercase h6">L'énergie à portée de main
+          </h1>
+          <nav role="navigation" class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+              <li class="nav-item"><a href="produit.html" class="nav-link">Nos produits</a></li>
+              <li class="nav-item"><a href="carte.html" class="nav-link">Implantation</a></li>
+              <li class="nav-item"><a href="AboutUs.html" class="nav-link">A propos</a></li>
+              <li class="nav-item"><a href="partenaires.html" class="nav-link">Partenaires</a></li>
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="d-flex">
+          <button type="button" class="navbar-toggler navbar-light bg-light align-self-center" data-bs-toggle="collapse"
+            data-bs-target="#navbar-content">
+            <span class="navbar-toggler-icon"></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="m-4">
+    <h2>Découvrez où recharger votre voiture</h2>
+    <p class="fs-6">Grâce à notre carte interactive, nous vous indiquons les différents emplacements de nos ombrières.
+      Vous n'avez plus qu'à vous rendre sur place et suivre les instruction sur indiquée sur les bornes de recharge.
+    </p>
+
+    <!-- Carte interactive -->
+    <div id="map"></div>
+    <h5 class="mt-4">Légende :</h5>
+    <p class="mb-5"><input type="image" src="../Assets/pin.jpg" name="pin" id="mainpin"> Ombrières déjà installées
+      <input type="image" src="../Assets/bluepin.jpg" name="bluepin" id="bluepin"> Projets en voie de développement
+    </p>
+
+    <!-- R&D -->
+    <h2>La Recherche et le Dévellopement.</h2>
+    <hr>
+    <div class="rounded d-md-flex justify-content-md-center" style="background-color: rgb(49, 52, 98);">
+      <img src="../Assets/R&D.jpg" alt="Photo de démonstration R&D" class="img-fluid">
+    </div>
+    <p class="pt-3" role="text">Lorsque nous parlons produits, la plus part des gens pense à ce que nous faisont, ou à
+      ce que nous
+      avons fait.
+      Chez Sunpower, nous voyons les choses un peu différement. Notre ambition, au delà de participer à construire un
+      monde plus agréable et plus pérenne, est d'améliorer nos techniques, nos produits et les services que nous
+      proposons. C'est en ce sens que, quand nous parlons de ce que nous faisons, c'est en pensant à ce que nous feront,
+      demain et au delà.<br />
+      Dans cette perspective, la <strong>Recherche</strong> et le <strong>Devellopement</strong> sont pour nous
+      essentiel, elle est dans notre ADN. Nous developpons les idées qui nous semblent porteuses, nous coopéront avec de
+      nombreuses équipes partenaires et nous repoussons sans cesse les limites.<br />
+      Actuellement, par exemple, nous developpons une avancée majeure, pour un avenir qui s'approche de jour en jour, la
+      <strong>recharge par induction</strong>.
+    </p>
+
+    <h3 class="mt-4">Présentation du projet</h3>
+    <hr>
+    <p role="text">Aujourd'hui, on trouve très commode de déposer son téléphone portable et qu'il se charge seul. C'est
+      devenu si
+      naturel que personne ne se demande comment cela fonctionne. Mais pour charger votre voiture electrique, vous
+      sortez le cable du coffre, il faut avoir le bon cable, etc. C'est contraignant! Notre objectif est de proposer des
+      places de stationnements sur lesquels vous arrivez, vous vacquez à vos occupations et votre voiture se recharge
+      seul. Vous ne vous inquèterez plus de trouver une borne compatible, ni de faire le plein. Vous roulerez librement.
+    </p>
+
+    <h3 class="mt-4">Les impératifs du projet.</h3>
+    <p role="text">Si ce projet n'est pas encore proposé, c'est que la technologie doit évoluer. Nous travaillons
+      actuellement sur trois points vitaux à sa réalisation.</p>
+    <ul role="list">
+      <li><span class="underline">L'électronique de puissance :</span> Le terme est quelque peu technique mais une fois
+        vulgarisé, il s'agit de reussir à transporter de l'énergie en grande quantité et avec un minimum de risque. Si
+        la charge est trop longue, votre passage dans la station ne suffira pas à compenser la route parcourue. Si au
+        cours de la charge, la voiture chauffe, elle s'abime et peut même vous mettre en danger. Ces deux hypothèses
+        sont, pour nous, innacceptables. Lorsque nous proposons une solution, elle est sure, efficace et ne gaspille pas
+        les ressources. C'est notre règle.</li>
+      <li><span class="underline">Le développement des BMS :</span> Ce terme est peu connu du public alors qu'on s'en
+        sert tous les jours. A chaque fois que vous utilisez un appareil muni de plusieurs piles, comme une télécommande
+        par exemple), cette appareil dispose d'un BMS. C'est la pièce électronique qui protège contre les problèmes de
+        tension. Il rallonge ainsi la durée de vie de la baterie et protège surtout les personnes à proximité contre les
+        dégats dû à des disfonctionnement. Pour une baterie de voiture, et plus encore des dispositifs solaires, les
+        quantités d'énergies traitées sont nettement plus grandes, le BMS grossi proportionnellement lui aussi.
+        Pourtant, un espace occupé plus important signifie moin de place dans la voiture comme sur les stations. Nous
+        nous attachons donc à rendre ces dispositifs plus compacts, grâce à de nouveaux matériaux, mais également plus
+        sure. Lorsqu'une pile s'abime, on est contrarié mais on la change. Dans le cadre d'une batterie puissante,
+        l'enjeu est tout autre. Et chez Sunpower, nous n'oublions jamais la sécurité de nos bénéficiaires.</li>
+      <li><span class="underline">L’électronique embarquée dans son ensemble :</span> Cet électronique embarqué est un
+        autre exemple de ce que l'on connait de nom sans pouvoir le préciser. Dans une voiture lambda, il assure la
+        gestion des phares, des clignotants ou encore de votre radio. Dans une voiture plus polyvalentes, il gèrera
+        aussi le réglage des rétro viseurs, des sièges, les vitres électriques.<br />
+        Dans une voiture électrique, tout est lié à cet électronique. Au dela de l'ABS ou de l'airbag, on parle du frein
+        à main, de la gestion de la puissance de la baterie et bien sure du moteur. Dans les Ombrières solaires, il en
+        va de même. L'électronique embarqué permet alors une utilisation simple, sécurisé et naturelle de cette nouvelle
+        technologie. Et lorsque votre GPS vous conduira à votre prochain rendez vous, dites vous bien que c'est, là
+        encore, de l'électronique embarqué.</li>
+    </ul>
+
+    <h3 class="mt-4">Les publics visés</h3>
+    <hr>
+    <p role="text">Il apparait comme évident que, dans un premier temps, ces technologies seront adréssées à des
+      ingénieurs et
+      soumis à des groupes professionnels et des collectivité. Mais sa fonctionalité final reste toujours au service de
+      nos utilisateurs. Peu de personnes savent comment on passe d'une touche sur laquelle on appuie à un poste qui
+      s'allume. Pourtant, tout le monde sais allumer sa télé. Nous voulons qu'il en soit de même pour la charge à
+      induction. Simple, sécurisé et efficace.</p>
+
+    <h3 class="mt-4">L'horizon du projet</h3>
+    <p role="text">Il y a encore quelques decennies, on aurait cru tout cela impossible. De la science fiction.
+      Aujourd'hui, c'est
+      un projet ambitieux. Que dire de demain ? On ne peut encore donner de délais précis mais nous savons que la
+      technologie évolue de plus en plus vite. Notre responsabilité est de s'adapter afin que ce qui en ressort soit
+      bénéfique pour le plus grand nombre. Les produits d'aujourd'hui ne sont rien d'autre que les projets ambitieux
+      d'hier.</p>
+
+    <h3 class="mt-4">Les projets futurs</h3>
+    <p role="text">Comme expliqué un peu plus haut, la recherche, l'innovation et bien sure l'amélioration font partie
+      de nous, au
+      même titre que nos valeurs. Nous avons donc toujours des projets de recherches en developpement. Ils est toutefois
+      dangereux de se précipiter car c'est souvent alors que les erreurs sont comises. Nous restons donc discret sur les
+      projets qui ne sont pas encore en cours de dévellopement.<br />
+      Ce que nous pouvons dire à ce jour, c'est que nous souhaitons ouvrir cette voie sur l'ensemble du territoire et
+      avons des ambitions à l'échelle européenne. Lorsque ces projets se concrétiseront, cette page sera l'un des media
+      pour communiquer sur ces avancées.</p>
+
+    <!-- bouton de retour en haut -->
+    <section>
+      <a role="link" aria-label="Retour en haut de page" class="text-decoration-none fs-6" href="#" id="haut"
+        title="Retour haut de page">Retour en haut</a>
+    </section>
+
+    <!-- formulaire de contact -->
+    <h3 class="h4">Pour prendre contact</h3>
+    <hr>
+    <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
+      <div class="container flex-column">
+
+        <!-- champs nom/prénom -->
+        <h5 class="mt-3">Vous êtes :</h5>
+        <div class="container d-md-flex">
+          <div class="my-2 col-md-5">
+            <label aria-label="nom" for="surname">NOM :
+              <input aria-label="Renseignez votre nom" type="text" name="surname" id="surname" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-5">
+            <label aria-label="Prénom" for="name">Prénom :
+              <input aria-label="Renseignez votre prénom" type="text" name="name" id="name" required />
+            </label>
+          </div>
+        </div>
+
+        <!-- Champs statut -->
+        <h5 class="mt-3">Votre statut :</h5>
+        <div class="mt-3">
+          <label class="row justify-content-center">
+
+            <div class="form-check col-5">
+              <label role="text" for="collectivite">Une collectivité</label>
+              <input role="radio" type="checkbox" name="statut" id="collectivite" value="collectivite"
+                class="form-check-input">
+            </div>
+
+            <div class="form-check col-6">
+              <label role="text" for="check-firm">Une entreprise
+                <input role="radio" role="button"
+                  aria-label="cocher se bouton si vous n'êtes pas une entreprise ou un syndic" class="form-check-input"
+                  type="checkbox" id="check-firm">
+              </label>
+            </div>
+
+            <div class="form-check col-5">
+              <input role="radio" type="checkbox" name="statut" id="syndic" value="syndic" class="form-check-input">
+              <label role="text" for="syndic">Un syndic</label>
+            </div>
+
+            <div class="form-check col-6">
+              <input role="radio" type="checkbox" name="statut" id="particulier" value="particulier"
+                class="form-check-input">
+              <label role="text" for="particulier">Un particulier</label>
+            </div>
+          </label>
+        </div>
+
+        <!-- Champ de coordonnées -->
+        <h5 class="pt-1 mt-3">Pour vous joindre :</h5>
+
+        <div class="d-md-flex mb-5">
+          <div class="my-2 col-md-5">
+            <label aria-label="Téléphone" role="text" for="phone">Tél. :
+              <input aria-label="Renseignez votre numéro de téléphone" type="tel" name="numStandard" id="phone"
+                placeholder="00-00-00-00-00" required />
+            </label>
+          </div>
+          <div class="my-2 col-md-6">
+            <label role="text" aria-label="Mail" for="mail">e-mail :
+              <input aria-label="Renseignez votre adresse mail" type="email" id="mail" placeholder="@dresse mail"
+                required />
+            </label>
+          </div>
+        </div>
+
+        <!-- placement des boutons -->
+        <div class="flex-column d-md-flex flex-md-row-reverse">
+          <div class="my-2 col-md-5">
+            <button role="button" aria-label="Envoyer le formulaire de contact" type="submit" class="btn"
+              id="send">Envoyer</button>
+          </div>
+          <div class="my-2 col-md-5">
+            <a role="link" href="./contact.html" class="badge text-decoration-none p-3" id="contact-redirection">Je
+              choisis
+              le formulaire complet</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="container-fluid border-top border-success mt-5">
+    <div class="row ms-5 ms-md-0">
+      <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+        <img src="../Assets/montpellier.jpg" alt="Montpellier" class="img-fluid" id="montpellier">
+      </div>
+      <div class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+        <img src="../Assets/Herault.jpg" alt="Département Hérault" class="img-fluid" id="herault">
+      </div>
+      <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/occitanie.jpg" alt="Région Occitanie" class="img-fluid" id="occitanie">
+      </div>
+      <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+        <img src="../Assets/toulouse.jpg" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+      </div>
+    </div>
+    <div class="row text-center my-md-3">
+      <p class="col-3">Copyright 2022
+        &copy;
+      </p>
+      <p class="col-3">Sunpower</p>
+      <p class="col-3">Projet 1</p>
+      <a class="text-decoration-none col-3 text-light" href="Mention.html" class="col-3">Mention légal</a>
+    </div>
+    <hr>
+    <p>Farah - Stéphane - Charles</p>
+  </footer>
+</body>
+
+</html>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- JS leaflet -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+<!-- JavaScript -->
+<script src="../JS/map.js"></script>
+<script src="../JS/Scroll.js"></script>

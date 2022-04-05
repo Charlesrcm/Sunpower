@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Page d'accueil de Sunpower, vous trouverez nos produits,
+      la carte interactive, plus d'informations nous concernant, un formulaire de contact et nos partenaires.">
+   <!--style de la map-->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+   <link rel="stylesheet" href="../style/style.css">
+   <!-- bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <title>Accueil | Sunpower</title>
+</head>
+
+<body>
+   <!-- en-tête -->
+   <header class="container-fluid">
+
+      <div class="navbar navbar-expand-md d-md-flex flex-row col-12">
+
+         <div class="d-flex flex-row">
+
+            <div>
+               <a href="index.html"><img src="../Assets/Logo.jpg" alt="Logo" class="img-fluid"></a>
+            </div>
+
+            <div class="d-flex flex-column">
+               <img src="../Assets/Sunpower.jpg" alt="Titre-sunpower" class="img-fluid">
+               <h1 aria-label="titre-contact" class="navbar-text text-center text-uppercase h6">L'énergie à portée de
+                  main
+               </h1>
+               <nav role="navigation" class="collapse navbar-collapse" id="navbar-content">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                     <li class="nav-item"><a href="produit.html" class="nav-link">Nos produits</a></li>
+                     <li class="nav-item"><a href="carte.html" class="nav-link">Implantation</a></li>
+                     <li class="nav-item"><a href="AboutUs.html" class="nav-link">A propos</a></li>
+                     <li class="nav-item"><a href="partenaires.html" class="nav-link">Partenaires</a></li>
+                     <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
+                  </ul>
+               </nav>
+            </div>
+
+            <div class="d-flex">
+               <button type="button" class="navbar-toggler navbar-light bg-light align-self-center"
+                  data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                  <span class="navbar-toggler-icon"></span></button>
+            </div>
+         </div>
+      </div>
+   </header>
+
+
+   <main role="main" class="container">
+
+      <!-- section de produits -->
+      <section class="row mt-5">
+         <H2 role="text">Nos produits</H2>
+         <hr />
+         <div class="row">
+            <a class="col-md-6" href="produit.html"><img role="img" src="../Assets/Ombirère.jpg" alt="Ombrière"
+                  class="img-fluid rounded" id="ombrière"></a>
+            <p role="text" class="pt-3 col-md-6">A la pointe de la technologie, notre ombrière offre bien plus qu'un
+               point de charge pour les véhicules électrique. De plus, il s'agit d'un produit <span
+                  class="fw-bold text-uppercase">100%
+                  français</span>, responsable et engagé dans
+               la préservation de votre avenir. Nous vous accompagnons dans la projet de A à Z. De la recherche
+               d'investissement à la construction du projet nous seront à vos côtés.</p>
+         </div>
+      </section>
+
+
+      <!-- section de la carte interactive -->
+      <section class="mt-5">
+         <H2 role="text">Notre implantation</H2>
+         <hr>
+         <div>
+            <a role="link" href="carte.html"><img role="img" src="../Assets/carte.jpg" alt="Carte interactive"
+                  class="img-fluid rounded"></a>
+            <p role="text" class="pt-3">Découvrez où recharger votre voiture grâce à notre carte interactive.</p>
+         </div>
+      </section>
+
+
+      <!-- section à propos -->
+      <section class="container mt-5">
+         <a class="text-decoration-none text-dark" href="AboutUs.html">
+            <h2>A propos de nous</h2>
+         </a>
+         <hr>
+         <div class="row justify-content-around">
+            <div class="col-3 align-self-center">
+               <img role="img" src="../Assets/Einstein.jpg" alt="Pareneinstein" class="img-fluid rounded">
+            </div>
+            <div class="col-3 align-self-lg-center ps-lg-5">
+               <img role="img" src="../Assets/Oppenheimer.jpg" alt="Oppenheimer" class="img-fluid rounded">
+            </div>
+            <div class="col-3">
+               <img role="img" src="../Assets/Turing.jpg" alt="Turing" class="img-fluid rounded">
+            </div>
+            <p role="text" class="pt-3">Découvrez le fabuleux destin des fondateurs de Sunpower !</p>
+         </div>
+      </section>
+
+
+      <!-- section de formulaire de contact -->
+      <section class="mt-5">
+         <a class="text-decoration-none text-dark" role="link" href="contact.html">
+            <h2 role="text">Contact</h2>
+         </a>
+         <hr>
+
+         <h3 class="h4">Pour prendre contact</h3>
+         <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
+            <div class="container flex-column">
+
+               <!-- champs nom/prénom -->
+               <h5 class="mt-3">Vous êtes :</h5>
+               <div class="container d-md-flex">
+                  <div class="my-2 col-md-5">
+                     <label aria-label="nom" for="surname">NOM :
+                        <input aria-label="Renseignez votre nom" type="text" name="surname" id="surname" required />
+                     </label>
+                  </div>
+                  <div class="my-2 col-md-5">
+                     <label aria-label="Prénom" for="name">Prénom :
+                        <input aria-label="Renseignez votre prénom" type="text" name="name" id="name" required />
+                     </label>
+                  </div>
+               </div>
+
+               <!-- Champs statut -->
+               <h5 class="mt-3">Votre statut :</h5>
+               <div class="mt-3">
+                  <label class="row justify-content-center">
+
+                     <div class="form-check col-5">
+                        <label role="text" for="collectivite">Une collectivité</label>
+                        <input role="radio" type="checkbox" name="statut" id="collectivite" value="collectivite"
+                           class="form-check-input">
+                     </div>
+
+                     <div class="form-check col-6">
+                        <label role="text" for="check-firm">Une entreprise
+                           <input role="radio" role="button"
+                              aria-label="cocher se bouton si vous n'êtes pas une entreprise ou un syndic"
+                              class="form-check-input" type="checkbox" id="check-firm">
+                        </label>
+                     </div>
+
+                     <div class="form-check col-5">
+                        <input role="radio" type="checkbox" name="statut" id="syndic" value="syndic"
+                           class="form-check-input">
+                        <label role="text" for="syndic">Un syndic</label>
+                     </div>
+
+                     <div class="form-check col-6">
+                        <input role="radio" type="checkbox" name="statut" id="particulier" value="particulier"
+                           class="form-check-input">
+                        <label role="text" for="particulier">Un particulier</label>
+                     </div>
+                  </label>
+               </div>
+
+               <!-- Champ de coordonnées -->
+               <h5 class="pt-1 mt-3">Pour vous joindre :</h5>
+
+               <div class="d-md-flex mb-5">
+                  <div class="my-2 col-md-5">
+                     <label aria-label="Téléphone" role="text" for="phone">Tél. :
+                        <input aria-label="Renseignez votre numéro de téléphone" type="tel" name="numStandard"
+                           id="phone" placeholder="00-00-00-00-00" required />
+                     </label>
+                  </div>
+                  <div class="my-2 col-md-6">
+                     <label role="text" aria-label="Mail" for="mail">e-mail :
+                        <input aria-label="Renseignez votre adresse mail" type="email" id="mail"
+                           placeholder="@dresse mail" required />
+                     </label>
+                  </div>
+               </div>
+
+               <!-- placement des boutons -->
+               <div class="flex-column d-md-flex flex-md-row-reverse">
+                  <div class="my-2 col-md-5">
+                     <button role="button" aria-label="Envoyer le formulaire de contact" type="submit" class="btn"
+                        id="send">Envoyer</button>
+                  </div>
+                  <div class="my-2 col-md-5">
+                     <a role="link" href="./contact.html" class="badge text-decoration-none p-3"
+                        id="contact-redirection">Je choisis
+                        le formulaire complet</a>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </section>
+
+
+      <!-- section de nos partenaires -->
+      <section class="mt-5">
+         <a class="text-decoration-none text-dark" role="link" href="partenaires.html">
+            <H2 role="text">Nos partenaires</H2>
+         </a>
+         <hr>
+
+         <div class="row pt-md-3">
+            <div class="col-md-3 ms-0 col-4 d-md-flex justify-content-md-end">
+               <img src="../Assets/Ademe.jpg" alt="logo Ademe" class="img-fluid" id="ademe">
+            </div>
+            <div class="d-md-flex col-md-9">
+               <p role="text" class="d-md-flex col-md-8">L'Agence de l'Environnement et de la Maîtrise de
+                  l'Energie, fondée en 1991, est un établissement public à
+                  caractère industriel et commercial qui participe à la mise en œuvre des politiques publiques dans les
+                  domaines de l'environnement, de l'énergie et du développement durable. C'est elle qui a financé le
+                  projet. Elle accompagne Sunpower depuis sa création afin de valoriser la production d'électricité
+                  propre accéssible à tous.
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <!-- bouton de retour en haut -->
+      <section>
+         <a role="link" aria-label="Retour en haut de page" class="text-decoration-none fs-6" href="#" id="haut"
+            title="Retour haut de page">Retour en haut</a>
+      </section>
+   </main>
+
+
+   <!-- Pied de page -->
+   <footer role="contentinfo" class="container-fluid border-top border-success mt-5">
+      <div class="row ms-5 ms-md-0 pt-md-3">
+         <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+            <img src="../Assets/montpellier.jpg" alt="Montpellier" class="img-fluid" id="montpellier">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+            <img src="../Assets/Herault.jpg" alt="Département Hérault" class="img-fluid" id="herault">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+            <img src="../Assets/occitanie.jpg" alt="Région Occitanie" class="img-fluid" id="occitanie">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+            <img src="../Assets/toulouse.jpg" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+         </div>
+      </div>
+      <div class="row text-center my-md-3">
+         <p class="col-3">Copyright 2022
+            &copy;
+         </p>
+         <p class="col-3">Sunpower</p>
+         <p class="col-3">Projet 1</p>
+         <a class="text-decoration-none col-3 text-light" href="Mention.html" class="col-3">Mention légal</a>
+      </div>
+      <hr>
+      <p>Farah - Stéphane - Charles</p>
+   </footer>
+
+</body>
+
+</html>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="../JS/Scroll.js"></script>
